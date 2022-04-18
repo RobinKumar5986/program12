@@ -2,6 +2,7 @@
 
 #include <stdio.h> 
 #include <stdlib.h> 
+//-----structure-------//
 struct BST {
 int data;
 struct BST *left; 
@@ -9,13 +10,15 @@ struct BST *right;
 };
 typedef struct BST NODE;
 NODE *node;
+//------create function----//
 NODE* createtree(NODE *node, int data) {
 if (node == NULL) {
 NODE *temp;
 temp= (NODE*)malloc(sizeof(NODE)); 
 temp->data = data;
 temp->left = temp->right = NULL; 
-return temp; }
+return temp; 
+}
 if (data < (node->data))
 {
 node->left = createtree(node->left, data);
@@ -25,6 +28,8 @@ else if (data > node->data)
 node -> right = createtree(node->right, data);
 }
 return node; }
+//-----search function-------//
+
 NODE* search(NODE *node, int data) {
 if(node == NULL) 
 printf("\nElement not found"); 
@@ -40,6 +45,7 @@ else
 printf("\nElement found is: %d", node->data); 
 return node;
 }
+//------inorder-------//
 void inorder(NODE *node)
 {
 if(node != NULL)
@@ -49,6 +55,7 @@ printf("%d\t", node->data);
 inorder(node->right);
 }
 }
+//------preorder--------//
 void preorder(NODE *node)
 {
 if(node != NULL)
@@ -58,6 +65,7 @@ preorder(node->left);
 preorder(node->right);
 }
 }
+//-----postorder-------//
 void postorder(NODE *node)
 {
 if(node != NULL)
@@ -67,6 +75,7 @@ postorder(node->right);
 printf("%d\t", node->data);
 }
 }
+//-----finding minimum------//
 NODE* findMin(NODE *node)
 {
 if(node==NULL)
@@ -78,6 +87,7 @@ return findMin(node->left);
 else
 return node;
 }
+//------deletion function-------//
 NODE* del(NODE *node, int data)
 {
 NODE *temp; 
@@ -117,6 +127,7 @@ free(temp); /* temp is longer required */
 }
 return node;
 }
+//-------main function------//
 void main()
 {
 int data, ch, i, n; 
@@ -128,7 +139,8 @@ printf("\n1.Insertion in Binary Search Tree");
 printf("\n2.Search Element in Binary Search Tree"); 
 printf("\n3.Delete Element in Binary Search Tree"); 
 printf("\n4.Inorder\n5.Preorder\n6.Postorder\n7.Exit"); 
-printf("\nEnter your choice: "); scanf("%d", &ch); 
+printf("\nEnter your choice: ");
+scanf("%d", &ch); 
 switch (ch)
 {
 case 1:
