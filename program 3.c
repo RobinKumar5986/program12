@@ -78,8 +78,8 @@ void display()
 //------palindrome-------//
 void pali()
 {
-    int digit,j,k,len=top+1,ind=0,length=0;
-    int rev[len];
+    int j,k,length=0;
+    int rev[top+!];
     int x=top;
     int i=0;
     while(x!=-1)
