@@ -144,13 +144,16 @@ break;
 case 2:
 printf("\nEnter the element to search: "); 
 scanf("%d", &data);
+search(root,data);
 break;
 case 3:
 printf("\nEnter the element to delete: "); 
 scanf("%d", &data);
 root=del(root, data); 
 break;
-case 4:
+case 4:printf("\nInorder Traversal: \n"); 
+inorder(root);
+break;
 case 5:
 printf("\nInorder Traversal: \n"); 
 inorder(root);
