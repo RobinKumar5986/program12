@@ -96,7 +96,7 @@ void deleteend()
         printf("\nList is empty...!!!\n");
     else if(h->next==NULL)
     {
-        printf("\n\tDeleted(end) NODE data\nusn:%s\nname:\n",h->usn,h->name);
+        printf("\n\tDeleted(end) NODE data\nusn:%s\nname:%s\n",h->usn,h->name);
         free(h);
         h=NULL;
         count--;
@@ -105,7 +105,7 @@ void deleteend()
     {
         temp1=temp1->prev;
         temp1->next=NULL;
-        printf("\n\tDeleted(end) NODE data\nusn:%s\nname:\n",temp->usn,temp->name);
+        printf("\n\tDeleted(end) NODE data\nusn:%s\nname:%s\n",temp->usn,temp->name);
         free(temp);
         count--;
         
@@ -119,11 +119,11 @@ void displaybeg(){
         printf("\nList is empty...!!!\n");
         
     printf("\n\t\tLinked list element is :\n");
-    do
+    for(int i=0;i<count;i++)
     {
         printf("\nusn:%s\nname:%s\n",temp->usn,temp->name);
         temp=temp->next;
-    }while(temp!=NULL);
+    }
     
     printf("\nTotal number of employes:%d\n",count);
 }
@@ -136,7 +136,7 @@ int main()
     printf("\n------------MENUE------------\n");
     printf("\n1.Create\n2.Display from begning\n3.Inser at end");
     printf("\n4.Delete at end\n5.Isert at beg\n6.Delete beg\n7.exit\n");
-    while(1)
+    while(ch!=7)
     {
         printf("\n\t\tEnter your choice:");
         scanf("%d",&ch);
@@ -169,6 +169,7 @@ int main()
                 exit(0);
             default:
                 printf("\ninvalid input...!\n");
+                exit(0);
         }
     }
     return 0;
