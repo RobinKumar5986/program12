@@ -118,13 +118,15 @@ void displaybeg(){
     if(temp==NULL)
         printf("\nList is empty...!!!\n");
         
-    printf("\n\t\tLinked list element is :\n");
-    for(int i=0;i<count;i++)
+    else
     {
-        printf("\nusn:%s\nname:%s\n",temp->usn,temp->name);
-        temp=temp->next;
+        for(int i=0;i<count;i++)
+        {
+            printf("\nusn:%s\nname:%s\n",temp->usn,temp->name);
+            temp=temp->next;
+        }
     }
-    
+        
     printf("\nTotal number of employes:%d\n",count);
 }
 //------------------------------//
