@@ -1,10 +1,4 @@
-/******************************************************************************
-
-                            Online C Compiler.
-                Code, Compile, Run and Debug C program online.
-Write your code in this editor and press "Run" button to compile and execute it.
-
-*******************************************************************************/
+//-----hashing function------//
 
 #include <stdio.h>
 #include<stdlib.h>
@@ -23,7 +17,7 @@ int main()
     {
         a[i]=-1;
     }
-    int ans=1;
+    int ans;
     while(ans){
         printf("\nentern the data");
         scanf("%4d",&num);
