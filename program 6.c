@@ -5,7 +5,7 @@
 #define max 10
 //----------------//
 int q[max];
-int front=0,rare=10;
+int front=0,rare=0;
 //--------insert--------//
 int insert()
 {
