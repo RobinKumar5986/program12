@@ -28,7 +28,6 @@ int delete()
         printf("\nQueue is Empty...!!!\n");
     else
     {
-        printf("\n\tDeleted element:%d\n",q[front+1]);
         front=(front+1)%max;
     }
     return q[front];
@@ -42,14 +41,14 @@ int display()
     
     for(i;i<=rare;i++)
         printf("%d\n",q[i]);
-    printf("\nfront:%d\nrare:%d\n",q[front+1],q[rare]);
+    printf("\nfront:%d\nrare:%d\n",q[(front+1)%max],q[rare]);
 }
 
 //--------main---------//
 
 int main()
 {
-    int ch;
+    int ch,num;
     printf("\n\t-----------MENUE------------\n");
     printf("\n\t\t1.Insert\n\t\t2.Delete\n\t\t3.Dispplay\n\t\t4.exit\n");
     do{
@@ -61,13 +60,14 @@ int main()
                 insert();
                 break;
             case 2:
-                delete();
+                num=delete();
+                printf("\n\tDeleted element:%d\n",num);
                 break;
             case 3:
                 display();
                 break;
         }
     }while(ch!=4);
-    printf("\n\t---------Thank You----------\n");
+    printf("\n\t    ---------Thank You----------\n");
     return 0;
 }
