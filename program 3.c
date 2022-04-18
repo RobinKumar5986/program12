@@ -79,7 +79,7 @@ void display()
 void pali()
 {
     int j,k,length=0;
-    int rev[top+!];
+    int rev[top+1];
     int x=top;
     int i=0;
     while(x!=-1)
