@@ -166,11 +166,7 @@ break;
 case 4:printf("\nInorder Traversal: \n"); 
 inorder(root);
 break;
-case 5:
-printf("\nInorder Traversal: \n"); 
-inorder(root);
-break;
-printf("\nPreorder Traversal: \n"); 
+case 5:printf("\nPreorder Traversal: \n"); 
 preorder(root);
 break;
 case 6:
